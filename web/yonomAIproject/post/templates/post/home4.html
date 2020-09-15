@@ -1,0 +1,50 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block style %}
+<link rel="stylesheet" href="{%static 'post/home4.css' %}" type="text/css" />
+{% endblock %}
+
+{% block content %}
+    <div class="home4_container">
+        <div class="home4_content1">
+            <div class="home4_video">
+                <div class="home4_video_12">
+                    <div class="home4_video_1">video 1
+                    </div>
+                    <div class="home4_video_2">video 2
+                    </div>
+                </div>
+
+                <div class="home4_video_34">
+                    <div class="home4_video_3">video 3
+                    </div>
+                    <div class="home4_video_4">video 4
+                    </div>
+                </div>
+            </div>
+            <div class="home4_event">
+                <div class="home4_log_event"> event log</div>
+                <div class="home4_result_event"> event result</div>
+            </div>
+        
+        </div>
+        
+        <div class="home4_content2">
+            <form action = "{% url 'post:input_video' %}" method="POST" enctype="multipart/form-data" class="content4_video" >
+            {% csrf_token %}  
+                <div class = "home4_content2_1">
+                    <input type='file' class='input4_video_1' name='input4_video_1' />
+                    <input type='file' class='input4_video_2' name='input4_video_2' />
+                    <input type='file' class='input4_video_3' name='input4_video_3' />
+                    <input type='file' class='input4_video_4' name='input4_video_4' />
+                </div>
+                <div class = "home4_content2_2">
+                    <button type="submit">확인</button>
+                </div>
+        </form>
+        
+        </div>
+    </div>
+
+{% endblock%}

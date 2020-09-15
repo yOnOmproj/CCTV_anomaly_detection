@@ -1,0 +1,38 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block style %}
+<link rel="stylesheet" href="{%static 'post/home2.css' %}" type="text/css" />
+{% endblock %}
+
+{% block content %}
+    <div class="home2_container">
+        <div class="home2_content1">
+            <div class="home2_video">
+                <div class="home2_video_1">video 1
+                </div>
+                <div class="home2_video_2">video 2
+                </div>
+            </div>
+            <div class="home2_event">
+                <div class="home2_log_event"> event log</div>
+                <div class="home2_result_event"> event result</div>
+            </div>
+        
+        </div>
+        <div class="home2_content2">
+
+            <form action = "{% url 'post:input_video' %}" method="POST" enctype="multipart/form-data" class="content2_video" >
+            {% csrf_token %}
+            <div class="home2_content2_1">
+                <input type='file' class='input2_video_1' name='input2_video_1' />
+                <input type='file' class='input2_video_2' name='input2_video_2' />
+            </div>
+            <div class="home2_content2_2">
+                <button type="submit">확인</button>
+            </div>
+            </form>
+
+        </div>
+    </div>
+{% endblock%}

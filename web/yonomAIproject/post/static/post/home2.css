@@ -1,0 +1,176 @@
+
+.home2_container{
+    border: 1px;
+    border-style: solid;
+    border-color: red;
+
+    height: 70%;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.home2_content1{
+    border: 1px;
+    border-style: solid;
+    border-color: red;
+
+    width: 100%;
+    height: 80%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+.home2_content2{
+    border: 1px;
+    border-style: solid;
+    border-color: red;
+
+    width: 100%;
+    height: 20%;
+
+    display: flex;
+
+    justify-content: space-between ;
+    align-items: center;
+
+
+}
+.home2_content2_1{
+    border: 1px;
+    border-style: solid;
+    border-color: red;
+    
+    width: 80%;
+    height: 100%;
+    
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+
+
+}
+.home2_content2_2{
+    border: 1px;
+    border-style: solid;
+    border-color: red;
+
+    width: 20%;
+    height: 100%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+.content2_video{
+    border: 1px;
+    border-style: solid;
+    border-color: red;
+
+    width: 100%;
+    height: 100%;
+
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+}
+
+
+
+.home2_video{
+    border: 1px;
+    border-style: solid;
+    border-color: red;
+
+
+    width: 70%;
+    height: 100%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+
+.home2_video_1{
+    border: 1px;
+    border-style: solid;
+    border-color: red;
+
+
+    margin:5px;
+
+    width: 45%;
+    height : 60%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.home2_video_2{
+    border: 1px;
+    border-style: solid;
+    border-color: red;
+
+
+    margin:5px;
+
+    width : 45%;
+    height: 60%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.home2_event{
+    border: 1px;
+    border-style: solid;
+    border-color: red;
+
+
+    width: 30%;
+    height: 100%;
+
+    
+}
+
+.home2_log_event{
+    border: 1px;
+    border-style: solid;
+    border-color: red;
+
+
+    width:100%;
+    height: 90%;
+
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+}
+
+
+.home2_result_event{
+    border: 1px;
+    border-style: solid;
+    border-color: red;
+
+    width:100%;
+    height: 10%;
+
+
+    display: flex;
+    justify-content: center;
+}
+
+

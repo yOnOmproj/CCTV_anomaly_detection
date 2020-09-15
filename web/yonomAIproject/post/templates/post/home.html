@@ -1,0 +1,19 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block style %}
+<link rel="stylesheet" href="{%static 'post/home.css' %}" type="text/css"/>
+{% endblock %}
+
+
+
+{% block content %}
+  <h1> Insert number of video </br></br>ex) 2, 3, 4</h1>
+  <form action="{% url 'post:home_number' %}" method='POST'>
+  {% csrf_token %}
+    <input type="text" id="number" name="number">
+    <button type="submit">확인</button>
+  </form>
+{%endblock%}
+
+

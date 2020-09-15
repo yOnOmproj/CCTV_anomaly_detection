@@ -1,0 +1,183 @@
+
+.home3_container{
+    border: 1px;
+    border-style: solid;
+    border-color: red;
+
+    height: 70%;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.home3_content1{    
+    border: 1px;
+    border-style: solid;
+    border-color: red;
+
+    width: 100%;
+    height: 80%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    
+}
+.home3_content2{
+    border: 1px;
+    border-style: solid;
+    border-color: red;
+
+    width: 100%;
+    height: 20%;
+
+    display: flex;
+    justify-content: space-between ;
+    align-items: center;
+
+
+}
+.content3_video{
+    border: 1px;
+    border-style: solid;
+    border-color: red;
+
+    width: 100%;
+    height: 100%;
+
+
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+}
+
+.home3_content2_1{
+    border: 1px;
+    border-style: solid;
+    border-color: red;
+    
+    width: 80%;
+    height: 100%;
+    
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+
+
+}
+
+.home3_content2_2{
+    border: 1px;
+    border-style: solid;
+    border-color: red;
+
+    width: 20%;
+    height: 100%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+.home3_video{
+    border: 1px;
+    border-style: solid;
+    border-color: red;
+
+    width: 70%;
+    height: 100%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+
+
+.home3_video_1{
+    border: 1px;
+    border-style: solid;
+    border-color: red;
+
+    margin:5px;
+
+    width: 30%;
+    height : 60%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.home3_video_2{
+    border: 1px;
+    border-style: solid;
+    border-color: red;
+
+    margin:5px;
+
+    width : 30%;
+    height: 60%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.home3_video_3{
+    border: 1px;
+    border-style: solid;
+    border-color: red;
+
+    margin:5px;
+
+    width : 30%;
+    height: 60%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.home3_event{
+    border: 1px;
+    border-style: solid;
+    border-color: red;
+    
+    width: 30%;
+    height: 100%;
+
+    
+}
+
+.home3_log_event{
+    border: 1px;
+    border-style: solid;
+    border-color: red;
+
+    width:100%;
+    height: 90%;
+
+    display: flex;
+    justify-content: center;
+    align-items: flex-end;
+}
+
+
+.home3_result_event{
+    border: 1px;
+    border-style: solid;
+    border-color: red;
+
+    width:100%;
+    height: 10%;
+
+    
+    display: flex;
+    justify-content: center;
+}
+
