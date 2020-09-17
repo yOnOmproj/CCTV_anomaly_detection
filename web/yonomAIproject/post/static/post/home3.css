@@ -78,6 +78,27 @@
     height: 100%;
 
     display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+
+}
+.home3_content2_2_video_num{
+    width: 100%;
+    height: 50%;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.home3_content2_2_button{
+    width: 100%;
+    height: 50%;
+
+    display: flex;
+    flex-direction: column;
     justify-content: center;
     align-items: center;
 

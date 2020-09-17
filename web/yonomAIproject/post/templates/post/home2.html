@@ -9,10 +9,15 @@
     <div class="home2_container">
         <div class="home2_content1">
             <div class="home2_video">
-                <div class="home2_video_1">video 1
+                <div class="home2_video_1">                         
+                    <video name='demo' controls autoplay width='100%' height='100%'><source src="../media/{{video1.video}}" type="video/mp4"></source></video>
                 </div>
-                <div class="home2_video_2">video 2
+                <div class="home2_video_2"> 
+                {% comment %} <h4>{{video2.video}}</h4> {% endcomment %}
+                    <video name='demo'controls autoplay width='100%' height='100%'><source src="../media/{{video2.video}}" type="video/mp4"></source></video>
+                        
                 </div>
+
             </div>
             <div class="home2_event">
                 <div class="home2_log_event"> event log</div>
@@ -22,14 +27,15 @@
         </div>
         <div class="home2_content2">
 
-            <form action = "{% url 'post:input_video' %}" method="POST" enctype="multipart/form-data" class="content2_video" >
+            <form action = "{% url 'post:insert_video' %}" method="POST" enctype="multipart/form-data" class="content2_video" >
             {% csrf_token %}
             <div class="home2_content2_1">
-                <input type='file' class='input2_video_1' name='input2_video_1' />
-                <input type='file' class='input2_video_2' name='input2_video_2' />
+                <input type='file' class='input_video_1' name='input_video_1' />
+                <input type='file' class='input_video_2' name='input_video_2' />
             </div>
             <div class="home2_content2_2">
-                <button type="submit">확인</button>
+                <div class="home2_content2_2_video_num"><input type="text" name="number" value="{{number}}" size=2/></div>
+                <div class="home2_content2_2_video_button"><button type="submit">확인</button></div>
             </div>
             </form>
 

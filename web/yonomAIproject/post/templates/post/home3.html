@@ -10,11 +10,14 @@
     <div class="home3_container">
         <div class="home3_content1">
             <div class="home3_video">
-                <div class="home3_video_1">video 1
+                <div class="home3_video_1">
+                    <video name='demo' controls autoplay width='100%' height='100%'><source src="../media/{{video1.video}}" type="video/mp4"></source></video>
                 </div>
-                <div class="home3_video_2">video 2
+                <div class="home3_video_2">
+                    <video name='demo' controls autoplay width='100%' height='100%'><source src="../media/{{video2.video}}" type="video/mp4"></source></video>
                 </div>
-                <div class="home3_video_3">video 3
+                <div class="home3_video_3">
+                    <video name='demo' controls autoplay width='100%' height='100%'><source src="../media/{{video3.video}}" type="video/mp4"></source></video>
                 </div>
             </div>
             <div class="home3_event">
@@ -24,17 +27,18 @@
         
         </div>
         <div class="home3_content2">
-            <form action = "{% url 'post:input_video' %}" method="POST" enctype="multipart/form-data" class="content3_video" >
+            <form action = "{% url 'post:insert_video' %}" method="POST" enctype="multipart/form-data" class="content3_video" >
             {% csrf_token %}  
 
             <div class="home3_content2_1">
-                <input type='file' class='input3_video_1' name='input3_video_1' />
-                <input type='file' class='input3_video_2' name='input3_video_2' />
-                <input type='file' class='input3_video_3' name='input3_video_3' />
+                <input type='file' class='input_video_1' name='input_video_1' />
+                <input type='file' class='input_video_2' name='input_video_2' />
+                <input type='file' class='input_video_3' name='input_video_3' />
             </div>
 
             <div class="home3_content2_2">
-                <button type="submit">확인</button>
+                <div class="home3_content2_2_video_num"><input type="text" name="number" value="{{number}}" size=2/></div>
+                <div class="home3_content2_2_video_button"><button type="submit">확인</button></div>
             </div>
             </form>
 
