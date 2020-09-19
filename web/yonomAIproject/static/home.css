@@ -1,0 +1,27 @@
+#test_btn1{ margin-right:15px; } 
+#test_btn2{ margin-left:15px; }
+#test_btn3{ margin-left:15px; }
+#test_btn4{ margin-left:15px; }
+#btn_group button{ 
+    border: 0px solid ; 
+    width: 100px;
+    height: 200px;
+    /* outline : 0; */
+    font-size: 50px;
+    font-weight: bold;
+    text-align: center;
+    background-color: rgba( 255, 255, 255, 0.0 );
+    color: white }
+
+#main { 
+    font-size: 40px;
+    text-align: center;
+    color: white }
+
+#section {
+    margin: 20%;
+    position: absolute;
+    width: 800px;
+    height: 160px;
+    text-align: center;
+}
