@@ -5,7 +5,7 @@
 
 
 ### 1. 데이터
-https://aihub.or.kr/aidata/139
+https://aihub.or.kr/aidata/139   
 가입 후 목적을 써야 다운로드 받을 수 있다.
 
 ### 2. 내용
