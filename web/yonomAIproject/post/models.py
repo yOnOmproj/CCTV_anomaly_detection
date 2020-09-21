@@ -5,3 +5,14 @@ from django.db import models
 class video_content(models.Model):
     video = models.FileField(upload_to='post', null=True)
 
+    # def __str__(self):
+    #     return self.video
+
+
+class mat(models.Model):
+    title = models.CharField(max_length=50, null=True)
+    mat = models.FileField(upload_to='mat', null=True)
+
+    def __str__(self):
+        return self.title
+

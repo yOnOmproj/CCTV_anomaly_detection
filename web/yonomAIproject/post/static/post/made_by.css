@@ -1,0 +1,48 @@
+#team_intro1{
+    font-size: 15px;
+
+    display: flex;
+    justify-content: center;
+    align-items: space-between;    
+}
+#team_intro2{
+    font-size: 15px;
+
+    display: flex;
+    justify-content: center;
+    align-items: space-between;    
+}
+section{
+    margin-right : 5%;
+    margin-left : 5%;
+    text-align: center;
+}
+h1{
+    text-align: center;
+}
+
+.made_by_container{
+    height: 70%;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.team_name{
+    width: 100%;
+    height: 10%;
+
+}
+
+.team_info{
+    width: 100%;
+    height: 90%;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+
+
+}

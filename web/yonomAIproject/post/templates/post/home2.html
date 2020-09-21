@@ -9,18 +9,23 @@
     <div class="home2_container">
         <div class="home2_content1">
             <div class="home2_video">
-                <div class="home2_video_1">                         
-                    <video name='demo' controls autoplay width='100%' height='100%'><source src="../media/{{video1.video}}" type="video/mp4"></source></video>
+                <div class="home2_video_1"> 
+                    {% comment %} <p>pppp</p>             {% endcomment %}
+                    <video name='demo' controls autoplay width='100%' height='100%'><source src="../media/{{video.video}}" type="video/mp4"></source></video>
                 </div>
-                <div class="home2_video_2"> 
-                {% comment %} <h4>{{video2.video}}</h4> {% endcomment %}
+                {% comment %} <div class="home2_video_2"> 
+                <h4>{{video2.video}}</h4>
                     <video name='demo'controls autoplay width='100%' height='100%'><source src="../media/{{video2.video}}" type="video/mp4"></source></video>
                         
-                </div>
+                </div> {% endcomment %}
 
             </div>
             <div class="home2_event">
-                <div class="home2_log_event"> event log</div>
+                <div class="home2_log_event"> 
+                {% comment %} {% autoescape off%}  {% endcomment %}
+                    {% comment %} <img src="data:image/png;base64,{{data}}" alt="" height="250", width="250"> {% endcomment %}
+                {% comment %} {% endautoescape %} {% endcomment %}
+                </div>
                 <div class="home2_result_event"> event result</div>
             </div>
         
@@ -31,10 +36,8 @@
             {% csrf_token %}
             <div class="home2_content2_1">
                 <input type='file' class='input_video_1' name='input_video_1' />
-                <input type='file' class='input_video_2' name='input_video_2' />
             </div>
             <div class="home2_content2_2">
-                <div class="home2_content2_2_video_num"><input type="text" name="number" value="{{number}}" size=2/></div>
                 <div class="home2_content2_2_video_button"><button type="submit">확인</button></div>
             </div>
             </form>

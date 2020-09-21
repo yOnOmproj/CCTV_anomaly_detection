@@ -1,0 +1,35 @@
+{% extends 'base.html' %}
+{% load static %}
+{% block style %}
+    <link rel="stylesheet" href="{%static 'post/about2.css' %}" type="text/css"/>
+{% endblock %}
+
+{% block content%}
+
+    <section id='model_explain'>
+        <img id='model_img' src="{%static 'post/image/howtowork.jpg' %}" alt="모델_원리" width="600" height="200">
+        <br></br>
+        <div id='model_text'>위 C3D와 segment 변환을 거쳐 영상을 전처리해 feature를 추출합니다.<br>
+            추출된 (1,4096)의 feature를 모델에 넣어 각 bag instance의 이상행동 score를 정합니다.<br>
+             positive bag과 negative bag 안의 가장 높은 score를 가진 instance를 비교하여, </br>positive bag instance의 score가 더 크다면 올바른 판단,<br>
+             negative bag instance의 score가 더 크다면 틀린 판단이라고 정의합니다</br>이를 손실함수에 적용하고 반복적으로 학습하여 loss를 줄입니다.<br></br>
+            위 모델은 이상행동의 기준이 주관적이기 때문에 어려웠던 기존의 분류 문제를 </br>재귀적인 방법으로 해결하고 높은 수준의 성능을 보입니다.
+        </div>
+        <br></br>
+    </section>
+    <div href="tab_href">
+        <a href="{%url 'post:about'%}">
+        <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-arrow-left-circle-fill" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+        <path fill-rule="evenodd" d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zm-4.5.5a.5.5 0 0 0 0-1H5.707l2.147-2.146a.5.5 0 1 0-.708-.708l-3 3a.5.5 0 0 0 0 .708l3 3a.5.5 0 0 0 .708-.708L5.707 8.5H11.5z"/>
+        </svg>
+        before
+        </a> 
+        &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+        <a href="{%url 'post:about3'%}">
+        next
+        <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-arrow-right-circle-fill" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
+        <path fill-rule="evenodd" d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zm-11.5.5a.5.5 0 0 1 0-1h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5z"/>
+        </svg>
+        </a>
+    </div>
+{% endblock%}

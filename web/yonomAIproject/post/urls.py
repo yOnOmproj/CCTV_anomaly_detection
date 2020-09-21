@@ -9,5 +9,7 @@ urlpatterns = [
     path('video_content/', views.video_content, name='input_video'),
     path('home_number/', views.home_number, name='home_number'),
     path('error/', views.error, name='error'),
-    path('insert_video/', views.insert_video, name='insert_video')
+    path('insert_video/', views.insert_video, name='insert_video'),
+    path('about2/', views.about2, name='about2'),
+    path('about3/', views.about3, name='about3'),
 ]

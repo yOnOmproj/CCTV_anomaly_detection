@@ -1,4 +1,4 @@
-{% extends 'base.html' %}
+{% comment %} {% extends 'base.html' %}
 {% load static %}
 
 {% block style %}
@@ -8,12 +8,71 @@
 
 
 {% block content %}
-  <h1> Insert number of video </br></br>ex) 2, 3, 4</h1>
-  <form action="{% url 'post:home_number' %}" method='POST'>
+<div class='main_home_container'>
+
+  <form action="{%url 'post:home_number'%}" method='POST'>
   {% csrf_token %}
-    <input type="text" id="number" name="number">
-    <button type="submit">확인</button>
+  </br></br></br></br></br></br></br></br>
+  <div class="form-group">
+    <label for="exampleInputEmail1">check your email</label>
+    <input type="email" class="form-control" id="exampleInputEmail1" aria-describedby="emailHelp">
+    <small id="emailHelp" class="form-text text-muted">If you don't have an ID, please click non-member login </small>
+  </div>
+  <div class="form-group">
+    <label for="exampleInputPassword1">check your password</label>
+    <input type="password" class="form-control" id="exampleInputPassword1">
+  </div>
+  <div class="form-group form-check">
+
+  </div>
+  <button type="submit" class="btn_btn-primary" name="member_login">member login</button>
+    <button type="submit" class="btn_btn-primary" name="non_member_login">non-member login</button>
   </form>
+</div>
 {%endblock%}
 
+ {% endcomment %}
 
+{% load static %}
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  <meta name="author" content="Mark Otto, Jacob Thornton, and Bootstrap contributors">
+  <meta name="generator" content="Jekyll v4.1.1">
+  <title>yOnOm AI project</title>
+
+  <link rel="stylesheet" href="{%static 'post/home.css'%}" />
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css" integrity="sha384-JcKb8q3iqJ61gNV9KGb8thSsNjpSL0n8PARn9HuZOnIxN0hoP+VmmDGMN5t9UJ0Z" crossorigin="anonymous">
+</head>
+<body>
+  <div class='main_home1_container'>
+    <div class='main_home_content'>
+      <div class='main_header'>
+        <div class="yonom">yOnOm</div>
+        <div class="cctvabnormal">cctv abnormal behavior detection</div>
+      </div>
+      <form action="{%url 'post:home_number'%}" method='POST' class='main_form'>
+      {% csrf_token %}
+        <div class="form-group1">
+          <label class='label1'>check your email</label>
+          <input type="text" class="form-control1" size=45/>
+          <small>If you don't have an ID, please click non-member login</small></br>
+          <label class='label1'>check your password</label>
+          <input type="password" class="form-control1" size=45/></br>
+          <div class="btn">
+            <button type="submit" class="btn_btn-primary1" name="member_login">member login</button>
+            <button type="submit" class="btn_btn-primary1" name="non_member_login">non-member login</button>
+          </div>
+        </div>
+
+      </form>
+    </div>
+  </div>
+<script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js" integrity="sha384-9/reFTGAW83EW2RDu2S0VKaIzap3H66lZH81PoYlFhbGU+6BZp6G7niu735Sk7lN" crossorigin="anonymous"></script>
+<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js" integrity="sha384-B4gt1jrGC7Jh4AgTPSdUtOBvfO8shuf57BaghqFfPlYxofvL8/KUEfYiJOMMV+rV" crossorigin="anonymous"></script>
+</body>
+</html>
