@@ -1,0 +1,37 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block style %}
+<link rel="stylesheet" href="{%static 'post/result.css' %}" type="text/css" />
+
+
+{% endblock %}
+
+{% block content %}
+    <div class="result_container">
+        <div class="result_content">
+            <div class="result_video_graph">
+                <div class="result_video">
+                    <video name='demo' controls autoplay width='100%' height='100%'><source src="../media/{{video.video}}" type="video/mp4"></source></video>
+                </div>
+                <div class="result_score_graph">
+                    <img src="data:image/png;base64,{{ data }}" alt="result_image" class="result_image"></img>
+                </div>
+            </div>
+
+            <div class="result_score">
+                {% for i in format_score_str %}
+                    <small id="score">{{i}}</small>
+                {% endfor %}    
+            </div>
+        </div>
+        <div class="result_video_title">
+            <div class="result_title">
+                {{video.title}}
+            </div>
+            <div class="result_event">
+                {{isnormal}}
+            </div>
+        </div>
+    </div>
+{% endblock%}

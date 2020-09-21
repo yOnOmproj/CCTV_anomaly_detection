@@ -1,0 +1,140 @@
+
+.result_container{
+    border: 1px;
+    border-style: solid;
+    border-color:  #7A8A8A;
+
+    height: 70%;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.result_content{
+    border: 1px;
+    border-style: solid;
+    border-color:  #7A8A8A;
+
+    width: 100%;
+    height: 90%;
+
+    display: flex;
+    /* justify-content: center;
+    align-items: center; */
+}
+
+.result_video_graph{
+    border: 1px;
+    border-style: solid;
+    border-color:  #7A8A8A;
+
+    width:  80%;
+    height: 100%;
+
+    display: flex;
+    flex-direction:column;
+    justify-content: center;
+    align-items: center;
+}
+.result_video{
+    border: 1px;
+    border-style: solid;
+    border-color:  #7A8A8A;
+
+    width:  100%;
+    height: 50%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+
+}
+.result_score_graph{
+    border: 1px;
+    border-style: solid;
+    border-color:  #7A8A8A;
+
+    width:  100%;
+    height: 50%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.result_image{
+    width: 100%;
+    height: 100%;
+    
+}
+.result_score{
+    border: 1px;
+    border-style: solid;
+    border-color:  #7A8A8A;
+
+    width:  20%;
+    height: 100%;
+
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    /* align-items: center; */
+
+
+}
+
+#score {
+    font-size :12px;
+
+}
+
+
+
+
+
+
+
+
+
+
+
+.result_video_title{
+    border: 1px;
+    border-style: solid;
+    border-color:  #7A8A8A;
+
+    width: 100%;
+    height: 10%;
+
+    display: flex;
+    /* justify-content: center; */
+    /* align-items: center; */
+}
+
+.result_title{
+    border: 1px;
+    border-style: solid;
+    border-color:  #7A8A8A;
+
+    width: 80%;
+    height: 100%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.result_event{
+    border: 1px;
+    border-style: solid;
+    border-color:  #7A8A8A;
+
+    width: 20%;
+    height: 100%;
+
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+

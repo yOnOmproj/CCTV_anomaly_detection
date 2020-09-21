@@ -39,9 +39,9 @@
     <div class="cover-container d-flex w-100 h-100 p-3 mx-auto flex-column">
   <header class="masthead mb-auto">
     <div class="inner">
-      <h3 class="masthead-brand">yOnOm</h3>
+      <a href="{%url 'post:home'%}"><h3 class="masthead-brand">yOnOm</h3></a>
       <nav class="nav nav-masthead justify-content-center">
-        <a class="nav-link active" href="{% url 'post:home'%}">Main</a>
+        <a class="nav-link active" href="{% url 'post:home_video'%}">Main</a>
         <a class="nav-link active" href="{% url 'post:about' %}">About</a>
         <a class="nav-link active" href="{% url 'post:made_by' %}">made_by</a>
       </nav>

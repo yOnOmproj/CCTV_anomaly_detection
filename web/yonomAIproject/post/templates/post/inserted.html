@@ -1,0 +1,39 @@
+{% extends 'base.html' %}
+{% load static %}
+
+{% block style %}
+<link rel="stylesheet" href="{%static 'post/home2.css' %}" type="text/css" />
+
+
+{% endblock %}
+
+{% block content %}
+    <div class="home2_container">
+        <div class="home2_content1">
+            <div class="home2_video">
+                <div class="home2_video_1"> 
+                    <video name='demo' controls autoplay width='100%' height='100%'><source src="../media/{{video.video}}" type="video/mp4"></source></video>
+                </div>
+            </div>
+            <div class="home2_event">
+                <div class="home2_log_event">  event_log
+                </div>
+                <div class="home2_result_event"> event result</div>
+            </div>
+        
+        </div>
+        <div class="home2_content2">
+
+            <form action = "{% url 'post:result' %}" method="POST" enctype="multipart/form-data" class="content2_video" >
+            {% csrf_token %}
+            <div class="home2_content2_1">
+                <h4>{{video.title}}</h4>
+            </div>
+            <div class="home2_content2_2">
+                <div class="home2_content2_2_video_button"><button type="submit">결과확인</button></div>
+            </div>
+            </form>
+
+        </div>
+    </div>
+{% endblock%}

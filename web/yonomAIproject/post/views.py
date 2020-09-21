@@ -4,6 +4,27 @@ from scipy.io import loadmat
 import matplotlib.pyplot as plt
 import io
 import urllib, base64
+import cv2
+import numpy as np
+import os
+import urllib, base64
+
+################## 반복 실행 시키기 ####################
+# import time 
+# import threading 
+
+# def thread_run():
+#     print("test")
+
+# rel = 0
+# count = 5
+# while count:
+#     threading.Timer(5+rel, thread_run).start()
+#     rel = rel + 5
+#     count = count - 1
+
+#######################################################
+
 # import chart_studio.plotly as py
 # import plotly.graph_objects as go 
 # from plotly.offline import plot
@@ -37,92 +58,44 @@ def made_by(request):
 
 #     return redirect('post:home')
 def insert_video(request):
+    video_delete = video_content.objects.all()
+    video_delete.delete()
+
     input_video = request.FILES['input_video_1']
-    video = video_content(video = input_video)
+    str_input_video = str(input_video)
+    str_input_video = str_input_video.split('.')[0]
+    video = video_content(video = input_video, title=str_input_video)
     video.save()
 
-    str_input_video = str(input_video)
+    # print(video)
     script_mat = '_C'
     mat_name = str_input_video.split('.')[0] + script_mat
 
-    load_mat = mat.objects.get(title=mat_name)
-    data1 = loadmat(load_mat.mat)
-    print(data1['predictions'])
-    video = video_content.objects.all()
+    mat_check = mat.objects.all()
 
+    for i in mat_check:
+        if str(mat_name) == str(i):
+            load_mat = mat.objects.get(title=mat_name)
+            mat_info = loadmat(load_mat.mat)
+            mat_score = mat_info['predictions']
+        else:
+            pass
+    
+
+    
+    # print(mat_score)
+    video = video_content.objects.all()
+    url = "../media/post/"
+    video_path = url + str(input_video)
+    print(video_path)
 
     context = {}
     context['video'] = video[0]
 
-    ###### plotly ######
-    # fig = go.Figure()
-    # scatter = go.Scatter(x=[0,1,2,3], y=[0,1,2,3], mode='lines', name='test', opacity=0.8, marker_color='green')
-    # fig.add_trace(scatter)
-    # plt_div = plot(fig, output_type='div')
-    # x_data = [0,1,2,3]
-    # y_data = [x**2 for x in x_data]
-    # plot_div = plot([Scatter(x=x_data, y=y_data,
-    #                     mode='lines', name='test',
-    #                     opacity=0.8, marker_color='green')],
-    #            output_type='div')
-
-    # context['plot_div'] = plot_div
-
-    # data = [go.bar(x=[0,1,2,3], y=[0,1,2,3])]
-    # plot_url = py.plot(data, filename='basic-bar')
-
-    # context['plot_url'] = plot_url
-    # print(context)
-    # trace0 = go.Scatter(x=[1, 2, 3, 4], y=[10, 15, 13, 17])
-    # trace1 = go.Scatter(x=[1, 2, 3, 4], y=[16, 5, 11, 9])
-    
-    # data = [trace0, trace1]
-    # plotly = py.plot(data, filename ='basic-line')
-
-    # context['plotly'] = plotly
-    # print(context)
-
-##### matplot #####
-    # plt.plot(range(10))
-    # fig = plt.gcf()
-    # buf = io.BytesIO()
-    # fig.savefig(buf, format='png')
-    # buf.seek(0)
-    # string = base64.b64encode(buf.read())
-    # url = urllib.parse.quote(string)
-
-    # context['data'] = url
-    # data2 = np.linspace(1, len(data1), 32)
-    # data3 = pd.DataFrame(data1, data2)
-
-    # plt.plot(data3)
-    # plt.savefig()
 
 
+    return render(request, 'post/inserted.html', context)
 
-    return render(request, 'post/home2.html', context)
-    # number = request.POST['number']
-
-    # for i in range(int(number)):
-    #     i_p = i+1
-    #     i_str = str(i_p)
-    #     input_value = f'input_video_{i_str}'
-
-    #     input_video = request.FILES[input_value]
-    #     video = video_content(video = input_video)
-    #     video.save()
-    
-    # video = video_content.objects.all()
-
-    # context = {}
-    # for i in range(int(number)):
-    #     i_p = i+1
-    #     i_str = str(i_p)
-
-    #     context[f'video{i_str}'] = video[i]
-
-    # print(context)
-    # return render(request, f'post/home{number}.html', context)
 
 def home_number(request):
     if 'non_member_login' in request.POST.keys():
@@ -141,3 +114,87 @@ def about2(request):
 
 def about3(request):
     return render(request, 'post/about3.html')
+
+
+def home_video(request):
+    video = video_content.objects.all()
+    video.delete()
+
+
+    return render(request, 'post/home2.html')
+
+
+def result(request):
+    video = video_content.objects.all()
+
+    isnormal = "normal"
+    script = '_C'
+    mat_name = video[0].title + script
+    print(str(mat_name))
+    str_mat_name = str(mat_name)
+
+    getmat = mat.objects.get(title = str_mat_name)
+    load_mat = loadmat(getmat.mat)
+    mat_score = load_mat['predictions']
+    format_score = []
+    format_score_str = {}
+    count = 1
+    for i in mat_score:
+        
+        formatting = format(i[0], '.4f')
+        float_formatting = float(formatting)
+        count_to_dic = str(count) + "/32"
+        if float_formatting > 0.4:
+            format_score_str[count] = count_to_dic+ " " + formatting + " abnormal"
+        else:
+            pass
+
+        format_score.append(float_formatting)
+        count = count + 1
+
+    # 12개
+
+    if len(format_score_str.values()) > 3:
+        isnormal = "abnormal"
+    else:
+        pass
+
+###### plt ########
+##### matplot #####
+    # plt.plot(range(10))
+    # fig = plt.gcf()
+    # buf = io.BytesIO()
+    # fig.savefig(buf, format='png')
+    # buf.seek(0)
+    # string = base64.b64encode(buf.read())
+    # url = urllib.parse.quote(string)
+
+    # context['data'] = url
+    # data2 = np.linspace(1, len(data1), 32)
+    # data3 = pd.DataFrame(data1, data2)
+
+    # plt.plot(data3)
+    # plt.savefig()
+
+    plt.figure(figsize=(5.1,2.2))
+    plt.plot(np.linspace(1, 32, 32), format_score, c='r', label="abnormal_score")
+    plt.plot(np.linspace(1, 32, 32), [0.4 for x in range(32)], 'b--')
+    plt.yticks(np.linspace(0, 1, 11))
+    plt.xticks(np.linspace(0, 32, 9))
+    plt.legend()
+
+    fig = plt.gcf()
+    buf = io.BytesIO()
+    fig.savefig(buf, format='png')
+    buf.seek(0)
+    string = base64.b64encode(buf.read())
+    uri = urllib.parse.quote(string)
+
+#####################
+
+    context = { 'video' : video[0],
+                'isnormal' : isnormal,
+                'format_score_str' : format_score_str.values(),
+                'data' : uri
+    }
+    return render(request, 'post/result.html', context)

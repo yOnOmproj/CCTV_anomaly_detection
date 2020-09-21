@@ -12,4 +12,6 @@ urlpatterns = [
     path('insert_video/', views.insert_video, name='insert_video'),
     path('about2/', views.about2, name='about2'),
     path('about3/', views.about3, name='about3'),
+    path('home_video/', views.home_video, name='home_video'),
+    path('result/', views.result, name='result'),
 ]
