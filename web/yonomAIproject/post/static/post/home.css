@@ -24,7 +24,7 @@ body{
     width: 100%;
     height: 20%;
 
-    background-color: #111111;
+    /* background-color: #111111; */
     margin-top: -10px;
 
     display: flex;
@@ -54,14 +54,16 @@ body{
 
 .btn_btn-primary2{
     background-color: rgba(170, 170, 170, 0.5);
+    color: whitesmoke;
     padding: 10px;
     margin-left: 75%;
     margin-right: 15%;
     margin-top: -80px;
 
     border: 1px;
-    border-style:  solid;
+    border-style: solid;
     border-radius: 30px;
+    border-color: rgba(170, 170, 170, 0.5);
 }
 
 /* .madin_home1_container{
@@ -98,8 +100,10 @@ body{
     width: 450px;
     height : 400px;
 
-    /* background-color: white; */
-    margin-top: 150px;
+    /* background-color: #292929; */
+    /* opacity: 0.5; */
+
+    margin-top: 180px;
     padding: 30px;
 
     display : flex;
@@ -108,6 +112,18 @@ body{
     /* align-items: center; */
 
 }
+
+/* .form-group1::after {
+    width: 100%;
+    height : 80%;
+    content: "";
+    background-color: #292929;
+    position: absolute;
+    top: 0;
+    left: 0;
+    z-index: -1;
+    opacity: 0.8;
+  } */
 
 .label1{
     /* background-color: pink; */
@@ -127,10 +143,12 @@ body{
     margin-bottom: 10px;
 }
 
-.small{
-    color: rgba(120, 120, 120, 0.7);
+.findID{
+    color: gray;
     text-align: right;
+    margin-top: 5px;
     margin-bottom: 10px;
+    font-size: 15px;
 }
 
 #ex_chk{
@@ -139,19 +157,12 @@ body{
     margin-top: 10px;
 }
 
-/* .btn{
-
-    display : flex;
-    justify-content: center;
-    align-items: center;
-} */
-
 .btn_btn-primary1{
     background-color: rgba(170, 170, 170, 0.5);
+    color: whitesmoke;
     padding: 10px;
-    /* margin: 10px; */
+    margin-top: 7px;
 
     border: 1px;
-    /* border-style: solid; */
     border-radius: 3px;
 }
