@@ -50,25 +50,34 @@
 <body>
   <div class='main_home1_container'>
     <div class='main_home_content'>
+
       <div class='main_header'>
         <div class="yonom">yOnOm</div>
-        <div class="cctvabnormal">cctv abnormal behavior detection</div>
+        <div class="cctvabnormal">CCTV Abnormal Behavior Detection</div>
+        <button type="submit" class="btn_btn-primary2" name="sign_up">Sign Up</button>
       </div>
+      
+
       <form action="{%url 'post:home_number'%}" method='POST' class='main_form'>
       {% csrf_token %}
         <div class="form-group1">
-          <label class='label1'>check your email</label>
-          <input type="text" class="form-control1" size=45/>
-          <small>If you don't have an ID, please click non-member login</small></br>
-          <label class='label1'>check your password</label>
-          <input type="password" class="form-control1" size=45/></br>
-          <div class="btn">
-            <button type="submit" class="btn_btn-primary1" name="member_login">member login</button>
-            <button type="submit" class="btn_btn-primary1" name="non_member_login">non-member login</button>
-          </div>
+          <label class='label1'>로그인</label>
+          <input type="text" class="form-control1" placeholder='이메일을 입력하세요.'/>
+          {% comment %} <label class='label1'>Password</label> {% endcomment %}
+          <input type="password" class="form-control1" placeholder='비밀번호를 입력하세요.'/>
+          {% comment %} <small>If you don't have an ID, please click non-member login</small></br> {% endcomment %}
+          
+          <button type="submit" class="btn_btn-primary1" name="member_login">Sign In</button>
+          {% comment %} <input type="checkbox" id="ex_chk">
+          <label for="ex_chk">로그인 상태 유지</label> {% endcomment %}
+          {% comment %} <small>아이디/비밀번호 찾기</small></br> {% endcomment %}
+          <a href="" class='small'>아이디/비밀번호 찾기</a>
+          </br>
+          <button type="submit" class="btn_btn-primary1" name="non_member_login">Non-member Sign In</button>
+          
         </div>
-
       </form>
+
     </div>
   </div>
 <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
