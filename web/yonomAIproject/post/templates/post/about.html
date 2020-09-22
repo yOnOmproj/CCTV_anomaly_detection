@@ -5,15 +5,16 @@
 {% endblock %}
 
 {% block content%}
-    <h1>이렇게 동작해요!</h1>
+    <h2>[yOnOm CCTV Detection 동작 원리]</h2>
     <br>
     <section id='c3d_explain'>
         <img id='c3d_img' src="{%static 'post/image/howtoc3d.jpg' %}" alt="c3d_원리" width="400" height="200">
         <br></br>
-        <div id='c3d_text'>
+        </br>
+        <div id='c3d_text' style='text-align:left'>
             C3D의 feature extraction 기능을 이용하고자 각 영상(mp4)에서 </br>16프레임단위로 fc6-1데이터를 생성합니다.
             </br>만들어진 데이터를 평균 내고, 정규화 하여 각 영상의 C3D feature를 추출합니다.</br></br>
-    
+        </div>
     <a href="{%url 'post:about2'%}">next
     <svg width="1em" height="1em" viewBox="0 0 16 16" class="bi bi-arrow-right-circle-fill" fill="currentColor" xmlns="http://www.w3.org/2000/svg">
     <path fill-rule="evenodd" d="M16 8A8 8 0 1 1 0 8a8 8 0 0 1 16 0zm-11.5.5a.5.5 0 0 1 0-1h5.793L8.146 5.354a.5.5 0 1 1 .708-.708l3 3a.5.5 0 0 1 0 .708l-3 3a.5.5 0 0 1-.708-.708L10.293 8.5H4.5z"/>
