@@ -91,6 +91,8 @@ def insert_video(request):
 
 def home_number(request):
     if 'non_member_login' in request.POST.keys():
+        video = video_content.objects.all()
+        video.delete()
 
         return render(request, 'post/home2.html')
     
