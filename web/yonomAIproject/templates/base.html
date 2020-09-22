@@ -39,11 +39,11 @@
     <div class="cover-container d-flex w-100 h-100 p-3 mx-auto flex-column">
   <header class="masthead mb-auto">
     <div class="inner">
-      <a href="{%url 'post:home'%}"><h3 class="masthead-brand">yOnOm</h3></a>
+      <h3 class="masthead-brand">yOnOm</h3>
       <nav class="nav nav-masthead justify-content-center">
-        <a class="nav-link active" href="{% url 'post:home_video'%}">Main</a>
+        <a class="nav-link active" href="{% url 'post:home'%}">Main</a>
         <a class="nav-link active" href="{% url 'post:about' %}">About</a>
-        <a class="nav-link active" href="{% url 'post:made_by' %}">made_by</a>
+        <a class="nav-link active" href="{% url 'post:made_by' %}">Made_by</a>
       </nav>
     </div>
   {% comment %} </div> {% endcomment %}
@@ -52,7 +52,7 @@
   {%endblock%}
   <footer class="mastfoot mt-auto">
     <div class="inner">
-      <p>Cover template for <a href="https://getbootstrap.com/">Bootstrap</a>, by <a href="https://twitter.com/mdo">@mdo</a>.</p>
+      {% comment %} <p>Cover template for <a href="https://getbootstrap.com/">Bootstrap</a>, by <a href="https://twitter.com/mdo">@mdo</a>.</p> {% endcomment %}
     </div>
   </footer>
 </div>
