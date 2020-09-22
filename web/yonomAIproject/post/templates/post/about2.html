@@ -7,12 +7,15 @@
 {% block content%}
 
     <section id='model_explain'>
+        </br>
         <img id='model_img' src="{%static 'post/image/howtowork.jpg' %}" alt="모델_원리" width="600" height="200">
         <br></br>
-        <div id='model_text'>위 C3D와 segment 변환을 거쳐 영상을 전처리해 feature를 추출합니다.<br>
+        <div id='model_text' style='text-align:left'>
+            위 C3D와 segment 변환을 거쳐 영상을 전처리해 feature를 추출합니다.<br>
             추출된 (1,4096)의 feature를 모델에 넣어 각 bag instance의 이상행동 score를 정합니다.<br>
-             positive bag과 negative bag 안의 가장 높은 score를 가진 instance를 비교하여, </br>positive bag instance의 score가 더 크다면 올바른 판단,<br>
-             negative bag instance의 score가 더 크다면 틀린 판단이라고 정의합니다</br>이를 손실함수에 적용하고 반복적으로 학습하여 loss를 줄입니다.<br></br>
+            </br>
+            positive bag과 negative bag 안의 가장 높은 score를 가진 instance를 비교하여, </br>positive bag instance의 score가 더 크다면 올바른 판단,<br>
+            negative bag instance의 score가 더 크다면 틀린 판단이라고 정의합니다</br>이를 손실함수에 적용하고 반복적으로 학습하여 loss를 줄입니다.<br></br>
             위 모델은 이상행동의 기준이 주관적이기 때문에 어려웠던 기존의 분류 문제를 </br>재귀적인 방법으로 해결하고 높은 수준의 성능을 보입니다.
         </div>
         <br></br>
