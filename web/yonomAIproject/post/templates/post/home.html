@@ -62,17 +62,17 @@
       {% csrf_token %}
         <div class="form-group1">
           <label class='label1'>로그인</label>
-          <input type="text" class="form-control1" placeholder='이메일을 입력하세요.'/>
+          <input type="text" class="form-control1" placeholder='Your Email'/>
           {% comment %} <label class='label1'>Password</label> {% endcomment %}
-          <input type="password" class="form-control1" placeholder='비밀번호를 입력하세요.'/>
+          <input type="password" class="form-control1" placeholder='Password'/>
           {% comment %} <small>If you don't have an ID, please click non-member login</small></br> {% endcomment %}
           
           <button type="submit" class="btn_btn-primary1" name="member_login">Sign In</button>
           {% comment %} <input type="checkbox" id="ex_chk">
           <label for="ex_chk">로그인 상태 유지</label> {% endcomment %}
           {% comment %} <small>아이디/비밀번호 찾기</small></br> {% endcomment %}
-          <a href="" class='small'>아이디/비밀번호 찾기</a>
-          </br>
+          <a href="" class='findID'>이메일 / 비밀번호 찾기</a>
+          <hr align=left width=100% color='whitesmoke'>
           <button type="submit" class="btn_btn-primary1" name="non_member_login">Non-member Sign In</button>
           
         </div>
