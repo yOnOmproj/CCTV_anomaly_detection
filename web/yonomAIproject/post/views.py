@@ -69,18 +69,10 @@ def insert_video(request):
 
     # print(video)
     script_mat = '_C'
-    mat_name = str_input_video.split('.')[0] + script_mat
+    mat_name = str_input_video.split('.')[0]
 
     mat_check = mat.objects.all()
 
-    for i in mat_check:
-        if str(mat_name) == str(i):
-            load_mat = mat.objects.get(title=mat_name)
-            mat_info = loadmat(load_mat.mat)
-            mat_score = mat_info['predictions']
-        else:
-            pass
-    
 
     
     # print(mat_score)
@@ -104,6 +96,9 @@ def home_number(request):
     
     else:
         return render(request, 'post/error.html')
+
+def main(request):
+    return render(request, 'post/home2.html')
 
 def error(request):
 
@@ -129,11 +124,11 @@ def result(request):
 
     isnormal = "normal"
     script = '_C'
-    mat_name = video[0].title + script
+    mat_name = video[0].title 
     print(str(mat_name))
     str_mat_name = str(mat_name)
 
-    getmat = mat.objects.get(title = str_mat_name)
+    getmat = mat.objects.get(title = str_mat_name + ".mat")
     load_mat = loadmat(getmat.mat)
     mat_score = load_mat['predictions']
     format_score = []
