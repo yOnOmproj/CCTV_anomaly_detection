@@ -2,10 +2,11 @@
 
 ## CCTV 이상행동 감지 서비스 만들기
 - 기간 : 2020-09-10 ~ 2020-09-23 (2주)
+- - -
 ### 개요 및 개발 필요성
 - 인공지능이 CCTV 의 영상을 분석하고 , 이상행동을 감지
 - 지능형 CCTV 로 효율적으로 관리인력을 분배 , 범죄상황에 대한 분석 및 대응을 자동화
-
+- - -
 ### 데이터
 - 수원시 이상행동 CCTV 데이터 
 - https:://aihub.or.kr/aidata/139/tool
@@ -27,9 +28,9 @@
 - - -
 ### 요약 및 결론
 ![image](https://user-images.githubusercontent.com/66463059/102055902-e23d0680-3e2e-11eb-8044-e2367c153197.png)
-- CCTV 영상에서 이상행동을 분류해 내는 기술을 웹에 서비스하고자 웹에서 영상을 입력했을 때, 해당 영상에서 이상행동을 탐지하고 그 발생시기를 시각화하여 영상을 분석할 수 있게 웹을 구현했다.
+- CCTV 영상에서 이상행동을 분류해 내는 기술을 웹에 서비스하고자 웹에서 영상을 입력했을 때, 해당 영상에서 이상행동을 탐지하고 그 발생시기를 시각화하여 영상을 분석할 수 있게 웹을 구현했다. 배포는 진행하지 않았다.
 - - -
-##### ref
+### ref
 1. [https://github.com/WaqasSultani/AnomalyDetectionCVPR2018](https://github.com/WaqasSultani/AnomalyDetectionCVPR2018)
 2. [https://github.com/dolongbien/HumanBehaviorBKU](https://github.com/dolongbien/HumanBehaviorBKU)
 
