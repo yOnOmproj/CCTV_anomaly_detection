@@ -9,9 +9,9 @@
 - - -
 ### 데이터
 - 수원시 이상행동 CCTV 데이터 
-- https:://aihub.or.kr/aidata/139/tool
+- https://aihub.or.kr/aidata/139/tool
 - UCF 이상, 정상 영상 데이터 
-- https:://visionlab-uncc-edu/download/summary/60-data/477-ucf-anomaly-detection-dataset
+- https://visionlab.uncc.edu/download/summary/60-data/477-ucf-anomaly-detection-dataset
 - - -
 ### 전처리
 - 각 영상(.mp4) 에서 16프레임단위로 fc6-1 데이터를 생성
