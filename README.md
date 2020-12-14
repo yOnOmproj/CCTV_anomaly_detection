@@ -14,6 +14,7 @@
 - https://visionlab.uncc.edu/download/summary/60-data/477-ucf-anomaly-detection-dataset
 - - -
 ### 전처리
+![image](https://user-images.githubusercontent.com/66463059/102057232-f84bc680-3e30-11eb-847b-7d19dbc4122d.png)
 - 각 영상(.mp4) 에서 16프레임단위로 fc6-1 데이터를 생성
 - 만들어진 데이터를 평균 내고 정규화 하여 C3D feature 텍스트를 추출
 - - -
